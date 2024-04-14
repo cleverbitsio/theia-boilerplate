@@ -1,10 +1,13 @@
 version: "3.7"
 services:
   theia:
+    platform: linux/amd64
     build:
       context: ../docker-container
     stdin_open: true
     tty: true
-    volumes:
-      - /Users/stefan/Privat/theia-boilerplate/:/theia:cached
+    ports:
+      - "3000:3000"
+#    volumes:
+#      - /Users/stefan/Privat/theia-boilerplate/:/theia:cached
       
